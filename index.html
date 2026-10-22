@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Catalogue de livres</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Catalogue de livres</h1>
+    <p>{{ nbFavoris }} livre(s) favori(s)</p>
+    <button @click="favorisSeulement = !favorisSeulement">
+      {{ favorisSeulement ? 'Afficher tous les livres' : 'Afficher uniquement les favoris' }}
+    </button>
+
+    <div v-for="book in livresAffiches" :key="book.id" class="book" :class="{ favori: book.isFav }">
+      <h2>{{ book.title }}</h2>
+      <p>{{ book.author }} - {{ book.year }}</p>
+      <span v-if="book.isFav" class="badge-favori">Favori</span>
+      <button @click="details[book.id] = !details[book.id]">Détails</button>
+      <p v-show="details[book.id]">{{ book.genre }}</p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
