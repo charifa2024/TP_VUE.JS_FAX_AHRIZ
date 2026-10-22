@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+button {
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid #888;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.filtres button {
+  margin-right: 8px;
+}
+
+.filtres .actif {
+  background-color: #2c7be5;
+  border-color: #2c7be5;
+  color: white;
+}
+
+.task {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 12px 0;
+}
+
+.task.terminee {
+  background-color: #eafbea;
+  border-color: #4caf50;
+}
+
+.task.terminee h2 {
+  text-decoration: line-through;
+  color: #666;
+}
+
+.statut {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.erreur {
+  color: #c0392b;
+}
